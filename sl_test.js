@@ -3,7 +3,7 @@ $("#run").click(() => tryCatch(run));
 function run() {
     return Excel.run(function (context) {
         var range = context.workbook.getSelectedRange();
-        range.format.fill.color = "yellow";
+        range.format.fill.color = "blue";
         range.load("address");
         return context.sync()
             .then(function () {
